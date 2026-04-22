@@ -15,6 +15,9 @@ No asumas que una herramienta externa es segura solo por estar publicada. Antes 
 
 - [Skills comunitarios](recomendaciones-skills.md)
 - [MCPs comunitarios](recomendaciones-mcp.md)
+- [CLIs para potenciar IA](recomendaciones-cli.md)
+- [Cómo decidir entre Skill, MCP o CLI](decision-skill-mcp-cli.md)
+- [Checklist de seguridad para herramientas comunitarias](seguridad-herramientas-comunitarias.md)
 
 ## Regla práctica
 
