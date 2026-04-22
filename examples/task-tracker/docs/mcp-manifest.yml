@@ -1,0 +1,38 @@
+version: 1
+
+project:
+  name: Task Tracker
+  scope: workspace
+  environment: local
+
+profiles:
+  default:
+    enabled:
+      - filesystem
+      - github
+
+mcp:
+  filesystem:
+    enabled: true
+    type: local-workspace
+    purpose: Leer y modificar archivos del ejemplo.
+    permissions:
+      - read:workspace
+      - write:workspace
+    limits:
+      - No tocar archivos fuera de examples/task-tracker.
+    secrets: []
+
+  github:
+    enabled: true
+    type: github
+    purpose: Revisar comentarios y cambios del ejemplo.
+    permissions:
+      - read:issues
+      - read:pull_requests
+      - read:comments
+      - write:comments
+    limits:
+      - No cambiar estado de PRs.
+    secrets:
+      - GITHUB_TOKEN
