@@ -67,6 +67,7 @@ Reglas mínimas:
 - El spec va antes que la implementación.
 - Los tests críticos nacen de ejemplos del spec.
 - Los cambios de contrato se revisan antes de tocar la lógica interna.
+- Si una tarea, spec o requerimiento es ambiguo, el agente debe preguntar antes de asumir.
 
 ---
 
