@@ -73,6 +73,25 @@ Reglas:
 
 - Ver `docs/mcp-manifest.yml`.
 
+## Skills locales
+
+Este ejemplo incluye skills propios en `.agents/skills/`.
+
+- `task-tracker-workflow`: flujo recomendado para implementar cambios respetando DDD/SDD.
+
+Uso sugerido:
+
+1. Revisar el skill antes de implementar cambios en `tasks`.
+2. Seguir el orden spec -> domain -> application -> infrastructure -> tests.
+
+## CLI vs Skill vs MCP
+
+- Skill: guía de trabajo reutilizable para el agente.
+- MCP: integración de capacidades externas para el agente.
+- CLI: comando ejecutado en terminal para instalar, validar o automatizar.
+
+Nota: los CLI no se consumen como un skill o MCP. Se instalan y ejecutan directamente en consola según su documentación.
+
 ## Comandos Útiles
 
 ```bash
