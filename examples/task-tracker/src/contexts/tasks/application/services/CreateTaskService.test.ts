@@ -1,7 +1,7 @@
 import { strict as assert } from "node:assert";
 import { describe, it } from "node:test";
-import { InMemoryTaskRepository } from "../../infrastructure/persistence/InMemoryTaskRepository";
-import { CreateTaskService } from "./CreateTaskService";
+import { InMemoryTaskRepository } from "../../infrastructure/persistence/InMemoryTaskRepository.js";
+import { CreateTaskService } from "./CreateTaskService.js";
 
 describe("CreateTaskService", () => {
   it("creates a pending task with a trimmed title", async () => {

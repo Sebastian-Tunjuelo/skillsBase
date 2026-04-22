@@ -1,8 +1,8 @@
 import { strict as assert } from "node:assert";
 import { describe, it } from "node:test";
-import { Task } from "../../domain/entities/Task";
-import { InMemoryTaskRepository } from "../../infrastructure/persistence/InMemoryTaskRepository";
-import { ListTasksService } from "./ListTasksService";
+import { Task } from "../../domain/entities/Task.js";
+import { InMemoryTaskRepository } from "../../infrastructure/persistence/InMemoryTaskRepository.js";
+import { ListTasksService } from "./ListTasksService.js";
 
 describe("ListTasksService", () => {
   it("returns all stored tasks", async () => {

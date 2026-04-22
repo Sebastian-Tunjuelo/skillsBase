@@ -15,4 +15,4 @@ Mostrar en consola un flujo completo de creación y listado de tareas usando la 
 
 ### Criterio de salida
 
-- Cada línea impresa debe contener `id`, `title` y `status` separados por ` | `.
+- Cada línea impresa debe contener `id`, `title` y `status` separados por `|`.

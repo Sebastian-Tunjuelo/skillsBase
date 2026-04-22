@@ -50,3 +50,12 @@ El manifiesto debe dejar claro qué MCPs están activos, en qué contexto se usa
 ## Criterio práctico
 
 Si una integración ayuda al agente a trabajar sobre el proyecto pero no describe el negocio, va aquí. Si describe el negocio, pertenece al dominio o a `specs/`.
+
+## Fuentes externas recomendadas
+
+Para descubrir herramientas creadas por la comunidad, revisa el [índice de recursos externos](README.md) y luego entra a:
+
+- [skills.sh](https://skills.sh/)
+- [mcpmarket.com/es](https://mcpmarket.com/es)
+
+Ambas fuentes deben tratarse con revisión manual: no asumas que todo lo publicado es seguro, estable o adecuado para datos sensibles.

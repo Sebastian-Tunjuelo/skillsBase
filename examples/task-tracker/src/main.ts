@@ -1,4 +1,4 @@
-import { buildDemoOutput } from "./app/demo";
+import { buildDemoOutput } from "./app/demo.js";
 
 async function main(): Promise<void> {
   const lines = await buildDemoOutput();

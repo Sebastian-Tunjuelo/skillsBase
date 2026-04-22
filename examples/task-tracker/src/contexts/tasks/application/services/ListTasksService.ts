@@ -1,5 +1,5 @@
-import { Task } from "../../domain/entities/Task";
-import { TaskRepository } from "../../domain/repositories/TaskRepository";
+import { Task } from "../../domain/entities/Task.js";
+import { TaskRepository } from "../../domain/repositories/TaskRepository.js";
 
 export class ListTasksService {
   constructor(private readonly taskRepository: TaskRepository) {}

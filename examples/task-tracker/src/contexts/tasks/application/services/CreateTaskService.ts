@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
-import { Task } from "../../domain/entities/Task";
-import { TaskRepository } from "../../domain/repositories/TaskRepository";
+import { Task } from "../../domain/entities/Task.js";
+import { TaskRepository } from "../../domain/repositories/TaskRepository.js";
 
 export interface CreateTaskInput {
   title: string;

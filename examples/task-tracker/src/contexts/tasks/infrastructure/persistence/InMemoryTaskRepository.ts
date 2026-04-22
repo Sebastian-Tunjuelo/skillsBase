@@ -1,5 +1,5 @@
-import { Task } from "../../../domain/entities/Task";
-import { TaskRepository } from "../../../domain/repositories/TaskRepository";
+import { Task } from "../../domain/entities/Task.js";
+import { TaskRepository } from "../../domain/repositories/TaskRepository.js";
 
 export class InMemoryTaskRepository implements TaskRepository {
   private readonly tasks: Task[] = [];

@@ -1,6 +1,7 @@
-import { CreateTaskService } from "../contexts/tasks/application/services/CreateTaskService";
-import { ListTasksService } from "../contexts/tasks/application/services/ListTasksService";
-import { InMemoryTaskRepository } from "../contexts/tasks/infrastructure/persistence/InMemoryTaskRepository";
+import { CreateTaskService } from "../contexts/tasks/application/services/CreateTaskService.js";
+import { ListTasksService } from "../contexts/tasks/application/services/ListTasksService.js";
+import { InMemoryTaskRepository } from "../contexts/tasks/infrastructure/persistence/InMemoryTaskRepository.js";
+import type { Task } from "../contexts/tasks/domain/entities/Task.js";
 
 export async function buildDemoOutput(): Promise<string[]> {
   const repository = new InMemoryTaskRepository();
@@ -12,5 +13,7 @@ export async function buildDemoOutput(): Promise<string[]> {
 
   const tasks = await listTasksService.execute();
 
-  return tasks.map((task) => `${task.id} | ${task.title} | ${task.status}`);
+  return tasks.map(
+    (task: Task) => `${task.id} | ${task.title} | ${task.status}`,
+  );
 }

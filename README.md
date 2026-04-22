@@ -36,6 +36,10 @@ src/
 5. Documenta los MCPs como herramientas transversales, no como parte del dominio.
 6. Usa [docs/mcps.md](docs/mcps.md) como guía para declarar MCPs activos en cada proyecto.
 
+## Recursos recomendados
+
+- [Índice de recursos externos](docs/README.md)
+
 ## Qué aporta cada capa
 
 - `domain/`: entidades, value objects, eventos y puertos del dominio.
