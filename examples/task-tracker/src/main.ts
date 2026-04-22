@@ -1,19 +1,10 @@
-import { CreateTaskService } from "./contexts/tasks/application/services/CreateTaskService";
-import { ListTasksService } from "./contexts/tasks/application/services/ListTasksService";
-import { InMemoryTaskRepository } from "./contexts/tasks/infrastructure/persistence/InMemoryTaskRepository";
+import { buildDemoOutput } from "./app/demo";
 
 async function main(): Promise<void> {
-  const repository = new InMemoryTaskRepository();
-  const createTaskService = new CreateTaskService(repository);
-  const listTasksService = new ListTasksService(repository);
+  const lines = await buildDemoOutput();
 
-  await createTaskService.execute({ title: "Write initial docs" });
-  await createTaskService.execute({ title: "Review architecture" });
-
-  const tasks = await listTasksService.execute();
-
-  for (const task of tasks) {
-    console.log(`${task.id} | ${task.title} | ${task.status}`);
+  for (const line of lines) {
+    console.log(line);
   }
 }
 
