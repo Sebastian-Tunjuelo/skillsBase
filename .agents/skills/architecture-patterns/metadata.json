@@ -1,0 +1,9 @@
+{
+  "name": "architecture-patterns",
+  "version": "1.0.0",
+  "description": "Guías de estructura para proyectos usando DDD y SDD",
+  "author": "local",
+  "license": "MIT",
+  "tags": ["ddd", "sdd", "architecture", "domain-driven-design", "spec-driven", "structure"],
+  "scope": ["backend", "frontend", "fullstack"]
+}

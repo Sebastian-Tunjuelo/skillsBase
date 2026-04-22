@@ -1,0 +1,9 @@
+{
+  "name": "prompt-engineering",
+  "version": "1.0.0",
+  "description": "Guía para escribir prompts efectivos y dividir trabajo en tareas para agentes de código e IA",
+  "author": "local",
+  "license": "MIT",
+  "tags": ["prompt", "llm", "agents", "tasks", "instructions", "spec"],
+  "scope": ["agents", "ai", "workflow"]
+}
