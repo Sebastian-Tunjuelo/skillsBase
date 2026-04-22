@@ -1,0 +1,61 @@
+# Ejemplo de manifiesto de MCPs para un proyecto basado en esta plantilla.
+# Ajusta los nombres de los MCPs al servidor o extensión que realmente uses.
+
+version: 1
+
+project:
+  name: TODO
+  scope: workspace
+  environment: local
+
+profiles:
+  default:
+    enabled:
+      - filesystem
+      - github
+  ui-review:
+    enabled:
+      - filesystem
+      - github
+      - browser
+
+mcp:
+  filesystem:
+    enabled: true
+    type: local-workspace
+    purpose: Leer y modificar archivos del workspace.
+    permissions:
+      - read:workspace
+      - write:workspace
+    limits:
+      - No tocar archivos fuera del workspace abierto.
+      - No modificar secretos ni archivos de entorno salvo que se solicite explícitamente.
+    secrets: []
+
+  github:
+    enabled: true
+    type: github
+    purpose: Revisar issues, PRs, comentarios y metadatos del repositorio.
+    permissions:
+      - read:issues
+      - read:pull_requests
+      - read:comments
+      - write:comments
+    limits:
+      - No cambiar estado de PRs ni hacer merges sin instrucción explícita.
+      - No publicar información sensible en comentarios o descripciones.
+    secrets:
+      - GITHUB_TOKEN
+
+  browser:
+    enabled: false
+    type: browser-automation
+    purpose: Validar flujos UI, capturar pantallas o inspeccionar comportamiento web.
+    permissions:
+      - navigate
+      - screenshot
+      - inspect-dom
+    limits:
+      - No usarlo para navegación que implique credenciales fuera del entorno de prueba.
+      - No persistir datos personales capturados durante la validación.
+    secrets: []
