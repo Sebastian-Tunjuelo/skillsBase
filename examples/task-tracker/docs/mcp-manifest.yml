@@ -36,3 +36,8 @@ mcp:
       - No cambiar estado de PRs.
     secrets:
       - GITHUB_TOKEN
+
+observations:
+  - Este manifiesto documenta una convencion local del proyecto, no un estandar universal de configuracion para todos los clientes MCP.
+  - El protocolo MCP puede ser compatible entre herramientas, pero el formato de archivo puede variar segun el cliente (por ejemplo, VS Code, OpenCode u otros).
+  - Si un cliente usa otro formato, reutilizar proposito, permisos, limites y secretos de este archivo y mapearlos a su configuracion nativa.

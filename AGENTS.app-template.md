@@ -69,6 +69,30 @@ Reglas mínimas:
 - Los cambios de contrato se revisan antes de tocar la lógica interna.
 - Si una tarea, spec o requerimiento es ambiguo, el agente debe preguntar antes de asumir.
 
+### Plantilla de tarea para agentes
+
+Usa este formato base para cualquier spec de tarea:
+
+```yaml
+agent:
+	role: "<Perfil> especializado en <especialidad>"
+	goal: "<Objetivo operativo único para esta tarea>"
+	backstory: "<Experiencia relevante, restricciones y criterios de ejecución>"
+```
+
+Campos mínimos adicionales del spec:
+
+- Objetivo (único por tarea)
+- Alcance (Incluye / No incluye)
+- Entradas
+- Salida esperada
+- Ejemplos (Caso feliz / Validación)
+- Criterios de calidad
+
+Regla de atomicidad:
+
+- Si la tarea tiene más de un objetivo principal, dividirla en tareas separadas.
+
 ---
 
 ## MCPs y Herramientas

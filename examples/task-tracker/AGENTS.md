@@ -43,6 +43,7 @@ Reglas:
 Especificaciones mínimas:
 
 - `specs/create-task.spec.md`
+- `specs/complete-task.spec.md`
 - `specs/list-tasks.spec.md`
 
 Reglas:

@@ -7,7 +7,7 @@ describe("buildDemoOutput", () => {
     const lines = await buildDemoOutput();
 
     assert.equal(lines.length, 2);
-    assert.match(lines[0] ?? "", /\| Write initial docs \| pending$/);
+    assert.match(lines[0] ?? "", /\| Write initial docs \| completed$/);
     assert.match(lines[1] ?? "", /\| Review architecture \| pending$/);
   });
 });

@@ -20,4 +20,15 @@ export class Task {
   get status(): TaskStatus {
     return this.props.status;
   }
+
+  complete(): Task {
+    if (this.props.status === "completed") {
+      return this;
+    }
+
+    return new Task({
+      ...this.props,
+      status: "completed",
+    });
+  }
 }
