@@ -30,7 +30,21 @@ mcp:
     limits:
       - No tocar archivos fuera del workspace abierto.
       - No modificar secretos ni archivos de entorno salvo que se solicite explícitamente.
+      - Rutas permitidas: /src /specs /docs /examples
+      - Rutas prohibidas: /node_modules /dist /.env*
     secrets: []
+    config:
+      workspacePath: ${WORKSPACE_ROOT}
+      allowedDirs:
+        - src
+        - specs
+        - docs
+        - examples
+      blockedDirs:
+        - node_modules
+        - dist
+        - .git
+        - .env*
 
   github:
     enabled: true
@@ -46,6 +60,18 @@ mcp:
       - No publicar información sensible en comentarios o descripciones.
     secrets:
       - GITHUB_TOKEN
+    config:
+      apiBaseUrl: "https://api.github.com"
+      apiVersion: "2022-11-28"
+      authentication:
+        type: "bearer"
+        tokenEnvVar: "GITHUB_TOKEN"
+      repository:
+        owner: "${REPO_OWNER}"
+        name: "${REPO_NAME}"
+      rateLimit:
+        requests: 5000
+        resetWindow: 3600
 
   browser:
     enabled: false
@@ -55,7 +81,28 @@ mcp:
       - navigate
       - screenshot
       - inspect-dom
+      - fill-forms
+      - click-elements
     limits:
       - No usarlo para navegación que implique credenciales fuera del entorno de prueba.
       - No persistir datos personales capturados durante la validación.
+      - Timeout máximo de 30 segundos por acción.
     secrets: []
+    config:
+      browser:
+        type: "chromium"
+        headless: true
+        viewport:
+          width: 1280
+          height: 720
+      timeout:
+        navigation: 30000
+        action: 5000
+        screenshot: 2000
+      disabled:
+        - login-automation
+        - credential-storage
+      testEnvironments:
+        - localhost:3000
+        - localhost:8080
+        - staging.example.com
